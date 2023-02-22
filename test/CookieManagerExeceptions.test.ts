@@ -1,28 +1,6 @@
 import { CookieManager } from '../src'
-import { it, describe, expect } from 'vitest'
 
-document.cookie = ''
-
-describe('CookieManager', () => {
-  it('should create a cookie', () => {
-    CookieManager.create('test', 'test', 10)
-
-    expect(document.cookie).not.toEqual('')
-  })
-
-  it('should edit a cookie', () => {
-    CookieManager.create('test', 'test', 10)
-    CookieManager.edit('test', 'test2', 10)
-
-    expect(CookieManager.get('test')).toEqual('test2')
-  })
-
-  it('should delete a cookie', () => {
-    CookieManager.delete('test')
-
-    expect(document.cookie).toEqual('')
-  })
-
+describe('CookieManager Exeptions', () => {
   it('should throw a "You must provide a name, value and expiresDays" exception', () => {
     expect(() => {
       try {
@@ -61,7 +39,7 @@ describe('CookieManager', () => {
     }).toThrowError('You must provide a name, newValue and expiresDays')
   })
 
-  it('should throw a Document is not defined exception', () => {
+  it('should throw a "Document is not defined" exception', () => {
     document = undefined
 
     expect(() => {

@@ -110,8 +110,12 @@ export class CookieManager {
     cookies.forEach((cookie) => {
       const [key, value] = cookie.split('=')
 
-      cookiesObj[key] = value
+      cookiesObj[key.trim()] = value
     })
+
+    if (!Object.keys(cookiesObj).length) {
+      return {}
+    }
 
     return cookiesObj
   }
