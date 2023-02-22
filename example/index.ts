@@ -1,4 +1,4 @@
-import { CookieManager } from 'cookie-management'
+import { CookieManager } from 'cookie-manager'
 
 cookies()
 
