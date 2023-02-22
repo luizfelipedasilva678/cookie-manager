@@ -44,7 +44,7 @@ Delete an existing cookie.
 
 ##### delete(name: `string`): `void`
 
-Get an existing cookie, if the cookie was not found the returned value will be a empty string.
+Get an existing cookie, if the cookie was not found the returned value will be an empty string.
 
 ##### get(name: `string`): `string`
 
