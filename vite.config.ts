@@ -19,8 +19,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
-      name: 'cookie-management',
-      fileName: 'cookie-management',
+      name: 'cookie-manager',
+      fileName: 'cookie-manager',
     },
   },
 })

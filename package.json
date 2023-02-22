@@ -1,5 +1,5 @@
 {
-  "name": "cookie-management",
+  "name": "cookie-manager",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -14,12 +14,12 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/cookie-management.umd.cjs",
-  "module": "./dist/cookie-management.js",
+  "main": "./dist/cookie-manager.umd.cjs",
+  "module": "./dist/cookie-manager.js",
   "exports": {
     ".": {
-      "import": "./dist/cookie-management.js",
-      "require": "./dist/cookie-management.umd.cjs"
+      "import": "./dist/cookie-manager.js",
+      "require": "./dist/cookie-manager.umd.cjs"
     }
   },
   "types": "./dist/types/index.d.ts",
