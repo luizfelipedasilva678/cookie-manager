@@ -1,4 +1,4 @@
-# cookie-management
+# cookie-manager
 
 Simple lib to manage cookies
 
