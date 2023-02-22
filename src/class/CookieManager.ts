@@ -18,6 +18,10 @@ export class CookieManager {
   }
 
   edit(name: string, newValue: string, expiresDays: number) {
+    if (!document) {
+      throw new CookieManagerException('Document is not defined')
+    }
+
     if (!name || !newValue || !expiresDays) {
       throw new CookieManagerException(
         'You must provide a name, newValue and expiresDays'
