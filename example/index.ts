@@ -1,4 +1,4 @@
-import { CookieManager } from '../src'
+import { CookieManager } from 'cookie-management'
 ;(function () {
   const cookieManager = new CookieManager()
 

@@ -10,6 +10,18 @@
     "prepare": "husky install",
     "postinstall": "npm run prepare"
   },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/cookie-management.umd.cjs",
+  "module": "./dist/cookie-management.js",
+  "exports": {
+    ".": {
+      "import": "./dist/cookie-management.js",
+      "require": "./dist/cookie-management.umd.cjs"
+    }
+  },
+  "types": "./dist/types/index.d.ts",
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
