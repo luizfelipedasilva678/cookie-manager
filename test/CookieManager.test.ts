@@ -2,24 +2,23 @@ import { CookieManager } from '../src'
 import { it, describe, expect } from 'vitest'
 
 document.cookie = ''
-const cookieManager = new CookieManager()
 
 describe('CookieManager', () => {
   it('should create a cookie', () => {
-    cookieManager.create('test', 'test', 10)
+    CookieManager.create('test', 'test', 10)
 
     expect(document.cookie).not.toEqual('')
   })
 
   it('should edit a cookie', () => {
-    cookieManager.create('test', 'test', 10)
-    cookieManager.edit('test', 'test2', 10)
+    CookieManager.create('test', 'test', 10)
+    CookieManager.edit('test', 'test2', 10)
 
-    expect(cookieManager.get('test')).toEqual('test2')
+    expect(CookieManager.get('test')).toEqual('test2')
   })
 
   it('should delete a cookie', () => {
-    cookieManager.delete('test')
+    CookieManager.delete('test')
 
     expect(document.cookie).toEqual('')
   })
@@ -27,7 +26,7 @@ describe('CookieManager', () => {
   it('should throw a "You must provide a name, value and expiresDays" exception', () => {
     expect(() => {
       try {
-        cookieManager.create('test', 10)
+        CookieManager.create('test', 10)
       } catch (error) {
         throw new Error(error.message)
       }
@@ -35,7 +34,7 @@ describe('CookieManager', () => {
 
     expect(() => {
       try {
-        cookieManager.create('test', 'teste')
+        CookieManager.create('test', 'teste')
       } catch (error) {
         throw new Error(error.message)
       }
@@ -43,7 +42,7 @@ describe('CookieManager', () => {
 
     expect(() => {
       try {
-        cookieManager.create('teste', 10)
+        CookieManager.create('teste', 10)
       } catch (error) {
         throw new Error(error.message)
       }
@@ -55,7 +54,7 @@ describe('CookieManager', () => {
 
     expect(() => {
       try {
-        cookieManager.edit('test', 10)
+        CookieManager.edit('test', 10)
       } catch (error) {
         throw new Error(error.message)
       }
@@ -67,7 +66,7 @@ describe('CookieManager', () => {
 
     expect(() => {
       try {
-        cookieManager.create('test', 'test', 10)
+        CookieManager.create('test', 'test', 10)
       } catch (error) {
         throw new Error(error.message)
       }
@@ -75,7 +74,7 @@ describe('CookieManager', () => {
 
     expect(() => {
       try {
-        cookieManager.edit('test', 'test2', 10)
+        CookieManager.edit('test', 'test2', 10)
       } catch (error) {
         throw new Error(error.message)
       }
@@ -83,7 +82,7 @@ describe('CookieManager', () => {
 
     expect(() => {
       try {
-        cookieManager.delete('test')
+        CookieManager.delete('test')
       } catch (error) {
         throw new Error(error.message)
       }

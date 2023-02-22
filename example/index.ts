@@ -1,13 +1,23 @@
 import { CookieManager } from 'cookie-management'
-;(function () {
-  const cookieManager = new CookieManager()
 
+cookies()
+
+function cookies() {
   try {
-    cookieManager.create('teste', 'blabla', 10)
-    console.log('COOKIE VALUE =>', cookieManager.get('teste'))
-    cookieManager.edit('teste', 'blabla5', 10000)
-    cookieManager.delete('teste')
+    CookieManager.create('teste', 'blabla', 10, false)
+
+    const cookieValue = CookieManager.get('teste')
+
+    console.log('COOKIE VALUE ', cookieValue)
+
+    CookieManager.edit('teste', 'blabla5', 1000, true)
+
+    const allCookies = CookieManager.getAll()
+
+    console.log('allCookies', allCookies)
+
+    CookieManager.delete('teste')
   } catch (error: any) {
     console.log(error.message)
   }
-})()
+}
