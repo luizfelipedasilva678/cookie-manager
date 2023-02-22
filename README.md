@@ -5,7 +5,7 @@ Simple lib to manage cookies
 ## Example of Usage
 
 ```js
-  import { CookieManager } from 'cookie-management'
+  import { CookieManager } from 'cookie-manager'
 
   cookies()
 
