@@ -34,20 +34,20 @@ Simple lib to manage cookies
 
 Create a new cookie.
 
-### create(name: `string`, value: `string`, expiresDays: `number`, secure?:`boolean`, path?: `string`, domain?: `string`): `void`
+##### create(name: `string`, value: `string`, expiresDays: `number`, secure?:`boolean`, path?: `string`, domain?: `string`): `void`
 
 Edit an existing cookie.
 
-### edit(name: `string`, newValue: `string`, expiresDays: `number`, secure?:`boolean`, path?: `string`, domain?: `string`): `void`
+##### edit(name: `string`, newValue: `string`, expiresDays: `number`, secure?:`boolean`, path?: `string`, domain?: `string`): `void`
 
 Delete an existing cookie.
 
-### delete(name: `string`): `void`
+##### delete(name: `string`): `void`
 
 Get an existing cookie, if the cookie was not found the returned value will be a empty string.
 
-### get(name: `string`): `string`
+##### get(name: `string`): `string`
 
 Get all available cookies
 
-### getAll(): `{ cookieName: cookieValue}`
+##### getAll(): `{ cookieName: cookieValue }`
